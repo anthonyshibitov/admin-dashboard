@@ -20,6 +20,7 @@ body {
 
 .header {
     background-color: white;
+    margin: 25px;
 }
 
 .sidebar {
@@ -78,7 +79,6 @@ img {
     height: auto;
 }
 
-
 .main-content {
     background-color: #F5EFE6;
     display: grid;
@@ -116,6 +116,7 @@ img {
     border-left: 6px solid #7895B2;
     padding: 25px;
     display: grid;
+    grid-template-rows: repeat(2, min-content) 1fr;
     gap: 10px;
     transition: transform 0.1s ease-in, box-shadow 0.2s ease-in;
 }
@@ -135,6 +136,7 @@ img {
     gap: 10px;
     justify-self: end;
     padding-top: 10px;
+    align-self: end;
 }
 .card > .actions > img {
     max-width: 16px;
@@ -157,4 +159,105 @@ img {
 
 .announcement-card > p {
     font-size: 0.8rem;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    padding-right: 50px;
+}
+
+.search-container {
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: 16px;
+    align-items: center;
+}
+
+#search {
+    border-radius: 50vh;
+    padding: 5px 10px;
+    border: none;
+    background-color: rgb(232, 231, 231);
+}
+
+.user-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.user-container > img:first-child {
+    height: 20px;
+}
+
+.user-container > img:nth-child(2) {
+    height: 32px;
+}
+
+.user-container > p {
+    font-weight: bolder;
+}
+
+.action-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 32px;
+}
+
+.action-container > input[type=button] {
+    border-radius: 50vh;
+    background-color: #E8DFCA;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+.welcome-container { 
+    display: flex;
+    gap: 32px;
+}
+
+.welcome-container > img {
+    height: 48px;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcome-text > p {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.trending-card-container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -3px rgba(0,0,0,0.29);
+    padding: 25px;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 15px;
+}
+
+.trending-card > p:first-child {
+    font-weight: 500;
+    padding-bottom: 0.3rem;
+}
+
+.trending-card > p {
+    font-size: 0.8rem;
+}
+
+.trending-card {
+    font-weight: lighter;
+    font-size: 0.8rem;
+    font-style: italic;
 }
